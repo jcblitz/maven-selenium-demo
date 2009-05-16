@@ -6,9 +6,11 @@
 package net.blitzstein.demo.testing.web;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import net.blitzstein.demo.testing.domain.Product;
+import net.blitzstein.demo.testing.domain.ProductComparable;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.request.WebRequest;
 
 /**
  *
@@ -56,9 +59,20 @@ public class ProductController implements ApplicationContextAware {
     }
 
     @RequestMapping(value = "/product/save.htm", method = RequestMethod.POST)
-    public void save(
-            @ModelAttribute("Product") Product product) {
+    public String save(
+            @ModelAttribute("Product") Product product, Model model, WebRequest webRequest) {
 
+            if (product.getId() == null) {
+                Integer id = getNextProductId();
+                product.setId(id);
+            } else {
+                Product old = getProduct(product.getId());
+                this.products.remove(old);
+            }
+            this.products.add(product);
+
+            registerMessage(webRequest, "Product was saved!");
+            return "redirect:view.htm?id="+product.getId();
     }
 
 
@@ -80,6 +94,7 @@ public class ProductController implements ApplicationContextAware {
             this.products = new ArrayList(productMap.values());
         }
 
+        Collections.sort(products, new ProductComparable());
         return this.products;
     }
 
@@ -95,7 +110,16 @@ public class ProductController implements ApplicationContextAware {
         return null;
     }
 
+    private int getNextProductId() {
+        Product product = this.getProducts().get(this.getProducts().size()-1);
+        return product.getId() + 1;
+    }
+
     public void setApplicationContext(ApplicationContext context) throws BeansException {
         this.context = context;
+    }
+
+    private void registerMessage(WebRequest webRequest, String message) {
+        webRequest.setAttribute("message", message, WebRequest.SCOPE_SESSION);
     }
 }

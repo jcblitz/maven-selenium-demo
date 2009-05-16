@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package net.blitzstein.demo.testing.domain;
 
 /**
@@ -10,6 +9,7 @@ package net.blitzstein.demo.testing.domain;
  * @author jared
  */
 public class Product {
+
     private Integer id;
     private String name, description;
     private float price;
@@ -66,6 +66,37 @@ public class Product {
         this.manufacturer = manufacturer;
     }
 
-    
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Product other = (Product) obj;
+        if (this.id != other.id && (this.id == null || !this.id.equals(other.id))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
+    }
+
+    public int compareTo(Object prod) {
+
+        if (this.id < ((Product)prod).getId()) {
+            return -1;
+        } else if (this.id > ((Product)prod).getId()) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
 
 }
