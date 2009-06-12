@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" skipped="0" tests="1" time="7.271" failures="0" name="net.blitzstein.demo.testing.integration.web.ProductSeleniumTest">
+<testsuite errors="0" skipped="0" tests="1" time="7.441" failures="0" name="net.blitzstein.demo.testing.integration.web.ProductIndexSeleniumTest">
   <properties>
     <property value="Java(TM) 2 Runtime Environment, Standard Edition" name="java.runtime.name"/>
     <property value="/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Libraries" name="sun.boot.library.path"/>
@@ -21,7 +21,7 @@
     <property value="/Users/jared/Documents/programming/java/netbeans-workspace/testing-demo" name="basedir"/>
     <property value="/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/lib/endorsed" name="java.endorsed.dirs"/>
     <property value="i386" name="os.arch"/>
-    <property value="/tmp/surefirebooter16574.jar" name="surefire.real.class.path"/>
+    <property value="/tmp/surefirebooter659.jar" name="surefire.real.class.path"/>
     <property value="/tmp" name="java.io.tmpdir"/>
     <property value="
 " name="line.separator"/>
@@ -33,7 +33,7 @@
     <property value="Java Platform API Specification" name="java.specification.name"/>
     <property value="49.0" name="java.class.version"/>
     <property value="HotSpot Client Compiler" name="sun.management.compiler"/>
-    <property value="10.5.6" name="os.version"/>
+    <property value="10.5.7" name="os.version"/>
     <property value="local|*.local|169.254/16|*.169.254/16" name="http.nonProxyHosts"/>
     <property value="/Users/jared" name="user.home"/>
     <property value="" name="user.timezone"/>
@@ -63,36 +63,5 @@
     <property value="local|*.local|169.254/16|*.169.254/16" name="ftp.nonProxyHosts"/>
     <property value="" name="sun.cpu.isalist"/>
   </properties>
-  <testcase classname="net.blitzstein.demo.testing.integration.web.ProductSeleniumTest" time="7.244" name="testSomethingSimple">
-    <error type="com.thoughtworks.selenium.SeleniumException" message="ERROR: Element //input[@name=&apos;q&apos;] not found">com.thoughtworks.selenium.SeleniumException: ERROR: Element //input[@name=&apos;q&apos;] not found
-	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
-	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
-	at com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)
-	at net.blitzstein.demo.testing.integration.web.ProductSeleniumTest.testSomethingSimple(ProductSeleniumTest.java:40)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:585)
-	at junit.framework.TestCase.runTest(TestCase.java:168)
-	at junit.framework.TestCase.runBare(TestCase.java:134)
-	at com.thoughtworks.selenium.SeleneseTestCase.runBare(SeleneseTestCase.java:212)
-	at junit.framework.TestResult$1.protect(TestResult.java:110)
-	at junit.framework.TestResult.runProtected(TestResult.java:128)
-	at junit.framework.TestResult.run(TestResult.java:113)
-	at junit.framework.TestCase.run(TestCase.java:124)
-	at junit.framework.TestSuite.runTest(TestSuite.java:232)
-	at junit.framework.TestSuite.run(TestSuite.java:227)
-	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:81)
-	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:62)
-	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:140)
-	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:127)
-	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:585)
-	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
-	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
-</error>
-  </testcase>
+  <testcase classname="net.blitzstein.demo.testing.integration.web.ProductIndexSeleniumTest" time="7.424" name="testNew"/>
 </testsuite>

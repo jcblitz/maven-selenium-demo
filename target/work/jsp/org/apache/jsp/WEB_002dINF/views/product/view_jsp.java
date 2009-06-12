@@ -62,17 +62,22 @@ public final class view_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t<title>\n");
       out.write("\t\t\tView\n");
       out.write("\t\t</title>\n");
+      out.write("                <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/stylesheets/styles.css\" />\n");
       out.write("\t</head>\n");
       out.write("\t<body>\n");
       out.write("            <h1>View</h1>\n");
       out.write("\n");
-      out.write("        ");
+      out.write("        <div id=\"message\" class=\"success\">\n");
+      out.write("            ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.message}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\n");
-      out.write("        ");
+      out.write("            ");
       if (_jspx_meth_c_remove_0(_jspx_page_context))
         return;
       out.write("\n");
+      out.write("        </div>\n");
       out.write("\n");
       out.write("        <div>\n");
       out.write("            <span>id: </span> ");

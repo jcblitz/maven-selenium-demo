@@ -9,12 +9,15 @@
 		<title>
 			View
 		</title>
+                <link rel="stylesheet" type="text/css" media="screen" href="${pageContext.request.contextPath}/stylesheets/styles.css" />
 	</head>
 	<body>
             <h1>View</h1>
 
-        ${sessionScope.message}
-        <c:remove var="message" scope="session"/>
+        <div id="message" class="success">
+            ${sessionScope.message}
+            <c:remove var="message" scope="session"/>
+        </div>
 
         <div>
             <span>id: </span> ${product.id}

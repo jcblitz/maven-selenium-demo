@@ -70,9 +70,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t<title>\n");
       out.write("\t\t\tIndex\n");
       out.write("\t\t</title>\n");
+      out.write("                <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/stylesheets/styles.css\" />\n");
       out.write("\t</head>\n");
       out.write("\t<body>\n");
-      out.write("            <h1>Index</h1>\n");
+      out.write("            <h1 id=\"title\">Index</h1>\n");
       out.write("\n");
       out.write("        <table>\n");
       out.write("            <tr>\n");
@@ -88,11 +91,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("        </table>\n");
       out.write("\n");
-      out.write("\n");
-      out.write("        <a title=\"Create a new product\" href=\"");
+      out.write("        <div class=\"buttons\">\n");
+      out.write("            <a class=\"button\" title=\"Create a new product\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/product/create.htm\">Create</a>\n");
-      out.write("\t</body>\n");
+      out.write("        </div>\n");
+      out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
@@ -122,7 +126,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
-          out.write("            <tr>\n");
+          out.write("            <tr id=\"product_row_");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\">\n");
           out.write("                <td>");
           if (_jspx_meth_c_out_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
@@ -144,15 +150,21 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("/product/view.htm?id=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\" title=\"View\" id=\"view_");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\">View</a>\n");
           out.write("                    <a href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("/product/edit.htm?id=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\">Edit</a>\n");
+          out.write("\" title=\"Edit\" id=\"edit_");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\"> Edit</a>\n");
           out.write("                    <a href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("/product/delete.htm?id=");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\" title=\"Delete\" id=\"delete_");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\">Delete</a>\n");
           out.write("                </td>\n");

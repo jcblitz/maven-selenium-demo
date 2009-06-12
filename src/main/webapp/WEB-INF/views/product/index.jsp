@@ -11,9 +11,10 @@
 		<title>
 			Index
 		</title>
+                <link rel="stylesheet" type="text/css" media="screen" href="${pageContext.request.contextPath}/stylesheets/styles.css" />
 	</head>
 	<body>
-            <h1>Index</h1>
+            <h1 id="title">Index</h1>
 
         <table>
             <tr>
@@ -24,15 +25,15 @@
             <th>Action</th>
             </tr>
         <c:forEach var="product" items="${products}">
-            <tr>
+            <tr id="product_row_${product.id}">
                 <td><c:out value="${product.id}" /></td>
                 <td><c:out value="${product.name}" /></td>
                 <td><c:out value="${product.manufacturer}" /></td>
                 <td><fmt:formatNumber value="${product.price}" type="currency"/></td>
                 <td>
-                    <a href="${pageContext.request.contextPath}/product/view.htm?id=${product.id}">View</a>
-                    <a href="${pageContext.request.contextPath}/product/edit.htm?id=${product.id}">Edit</a>
-                    <a href="${pageContext.request.contextPath}/product/delete.htm?id=${product.id}">Delete</a>
+                    <a href="${pageContext.request.contextPath}/product/view.htm?id=${product.id}" title="View" id="view_${product.id}">View</a>
+                    <a href="${pageContext.request.contextPath}/product/edit.htm?id=${product.id}" title="Edit" id="edit_${product.id}"> Edit</a>
+                    <a href="${pageContext.request.contextPath}/product/delete.htm?id=${product.id}" title="Delete" id="delete_${product.id}">Delete</a>
                 </td>
 
 
@@ -41,7 +42,8 @@
         </c:forEach>
         </table>
 
-
-        <a title="Create a new product" href="${pageContext.request.contextPath}/product/create.htm">Create</a>
-	</body>
+        <div class="buttons">
+            <a class="button" title="Create a new product" href="${pageContext.request.contextPath}/product/create.htm">Create</a>
+        </div>
+    </body>
 </html>

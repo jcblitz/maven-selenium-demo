@@ -7,6 +7,7 @@
 		<title>
 			Edit
 		</title>
+                <link rel="stylesheet" type="text/css" media="screen" href="${pageContext.request.contextPath}/stylesheets/styles.css" />
 	</head>
 	<body>
             <h1>Edit</h1>
@@ -29,7 +30,7 @@
                   <tr>
                       <td colspan="2">
                           <input type="submit" value="Save Changes" />
-                          <a href="${pageContext.request.contextPath}/product/view.htm?id=${product.id}">Cancel</a>
+                          <a class="button" title="Cancel" href="${pageContext.request.contextPath}/product/index.htm">Cancel</a>
                       </td>
                   </tr>
               </table>

@@ -66,6 +66,9 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t<title>\n");
       out.write("\t\t\tEdit\n");
       out.write("\t\t</title>\n");
+      out.write("                <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/stylesheets/styles.css\" />\n");
       out.write("\t</head>\n");
       out.write("\t<body>\n");
       out.write("            <h1>Edit</h1>\n");
@@ -133,11 +136,9 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                  <tr>\n");
           out.write("                      <td colspan=\"2\">\n");
           out.write("                          <input type=\"submit\" value=\"Save Changes\" />\n");
-          out.write("                          <a href=\"");
+          out.write("                          <a class=\"button\" title=\"Cancel\" href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("/product/view.htm?id=");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\">Cancel</a>\n");
+          out.write("/product/index.htm\">Cancel</a>\n");
           out.write("                      </td>\n");
           out.write("                  </tr>\n");
           out.write("              </table>\n");

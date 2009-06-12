@@ -1,0 +1,26 @@
+body {
+    font-family: Verdana;
+}
+
+td {
+    padding-right: 5px;
+}
+
+th {
+    padding: 0 10px;
+}
+
+a.button {
+    background: #333;
+    border: 2px solid #666;
+    color: #fff;
+    text-decoration: none;
+}
+
+div.buttons {
+    padding: 10px;
+}
+
+.success {
+    background: green;
+}

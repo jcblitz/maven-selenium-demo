@@ -13,7 +13,7 @@
 			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
                         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
 
-    <context:component-scan base-package="net.blitzstein.demo.testing.web"/>
+    <context:component-scan base-package="net.blitzstein.demo.testing"/>
     <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
 
 
@@ -40,7 +40,7 @@
         <property name="suffix" value=".jsp"/>
         <property name="order" value="2" />
     </bean>
-
+    
     <bean id="productController" class="net.blitzstein.demo.testing.web.ProductController">
    
     </bean>
