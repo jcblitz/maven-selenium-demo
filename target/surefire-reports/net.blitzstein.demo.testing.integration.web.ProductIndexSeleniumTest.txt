@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: net.blitzstein.demo.testing.integration.web.ProductIndexSeleniumTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.453 sec
